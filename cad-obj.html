@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header>
+        <a href="login.html" class="sair" ><img src="./img/icons8-desligar-96 1.png" alt="">Sair</a>
+    </header>
+    <main>
+        <h1>Objetos Cadastrados</h1>
+        <div>
+            <select name="" id="redirecionar" class="air-box" >
+            <option value="cad-obj.html">Visitações</option>
+            <option value="cad-car.html" >Curiosidade</option>
+            </select>
+            <table>
+           <tr>
+                <th>Nome</th>
+                <th>Ultima Atualização</th>
+                <th>Registrado</th>
+                <th>Ações</th>
+           </tr>
+           <tr >
+                <td>Peixe-Boi</td>
+                <td>16/02/2023</td>
+                <td>03/01/2023</td>
+                <td>
+                    <a href=""><img src="./img/icons8-editar-96 1.png" alt=""></a>
+                    <a href=""><img src="./img/icons8-fechar-96 1.png" alt=""></a>
+                </td>
+           </tr>
+           <tr >
+                <td>Ariranha</td>
+                <td>16/02/2023</td>
+                <td>02/01/2023</td>
+                <td>
+                    <a href=""><img src="./img/icons8-editar-96 1.png" alt=""></a>
+                    <a href=""><img src="./img/icons8-fechar-96 1.png" alt=""></a>
+                </td>
+           </tr>
+           <tr>
+                <td>Jacaré-Açu</td>
+                <td>16/02/2023</td>
+                <td>03/01/2023</td>
+                <td>
+                    <a href=""><img src="./img/icons8-editar-96 1.png" alt=""></a>
+                    <a href=""><img src="./img/icons8-fechar-96 1.png" alt=""></a>
+                </td>
+           </tr>
+           <tr >
+            <td>Peixe-Boi</td>
+            <td>16/02/2023</td>
+            <td>03/01/2023</td>
+            <td>
+                <a href=""><img src="./img/icons8-editar-96 1.png" alt=""></a>
+                <a href=""><img src="./img/icons8-fechar-96 1.png" alt=""></a>
+            </td>
+           </tr>
+            </table>
+
+        </div>
+        <a href="visitacao.html">
+            <button type="button" class="btn-post">+  Adicionar post</button>    
+        </a>
+        <!--
+            FIELDSET
+        -->
+        <fieldset class="time-field" >
+            <LEGend>Horarios de Visitação</LEGend>
+            <label for="">Domingo</label>
+            <input type="text"placeholder="09:00 - 12:00" disabled class="fechado1" >
+            <input type="text"placeholder="14:00 - 16:00" disabled class="fechado2" >
+            <input type="checkbox" class="ponto-fechado" name="" id="">Fechado
+            <input type="text" placeholder="Justificativa" disabled class="justificativa" >
+            
+            <label for="">Segunda-Feira</label>
+            <input type="text"placeholder="09:00 - 12:00" disabled class="fechado1" >
+            <input type="text"placeholder="14:00 - 16:00" disabled class="fechado2" >
+            <input type="checkbox" class="ponto-fechado" name="" id="">Fechado
+            <input type="text" placeholder="Justificativa" disabled class="justificativa">
+
+            <label for="">Terça-Feira</label>
+            <input type="text"placeholder="09:00 - 12:00" disabled class="fechado1" >
+            <input type="text"placeholder="14:00 - 16:00" disabled class="fechado2" >
+            <input type="checkbox" class="ponto-fechado" name="" id="">Fechado
+            <input type="text" placeholder="Justificativa" disabled class="justificativa">
+
+            <label for="">Quarta-Feira</label>
+            <input type="text"placeholder="09:00 - 12:00" disabled class="fechado1" >
+            <input type="text"placeholder="14:00 - 16:00" disabled class="fechado2" >
+            <input type="checkbox" class="ponto-fechado" name="" id="">Fechado
+            <input type="text" placeholder="Justificativa"  disabled class="justificativa">
+
+            <label for="">Quinta-Feira</label>
+            <input type="text"placeholder="09:00 - 12:00" disabled class="fechado1" >
+            <input type="text"placeholder="14:00 - 16:00" disabled class="fechado2" >
+            <input type="checkbox" class="ponto-fechado" name="" id="">Fechado
+            <input type="text" placeholder="Justificativa" disabled class="justificativa">
+
+            <label for="">Sexta-Feira</label>
+            <input type="text"placeholder="09:00 - 12:00" disabled class="fechado1" >
+            <input type="text"placeholder="14:00 - 16:00" disabled class="fechado2" >
+            <input type="checkbox" class="ponto-fechado" name="" id="">Fechado
+            <input type="text" placeholder="Justificativa" disabled class="justificativa">
+
+            <label for="">Sábado</label>
+            <input type="text"placeholder="09:00 - 12:00" disabled class="fechado1" >
+            <input type="text"placeholder="14:00 - 16:00" disabled class="fechado2" >
+            <input type="checkbox" class="ponto-fechado" name="" id="">Fechado
+            <input type="text" placeholder="justificativa" disabled class="justificativa">
+
+            <input type="submit" value="Atualizar" id="n-post">
+            
+        </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+        </main>
+    <footer></footer>
+    <script>
+        document.getElementById('redirecionar').onchange = function() {
+            var url = this.value;
+            if (url !== '') {
+                window.location.href = url;
+            }
+        };
+
+       //habilitar e desabilitar os checks
+        const checkboxes = document.querySelectorAll('.ponto-fechado');
+        const inputs = document.querySelectorAll('.fechado1');
+        checkboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                const index = Array.from(checkboxes).indexOf(checkbox);
+                if (this.checked) {
+                    inputs[index].disabled = true;
+                } else {
+                    inputs[index].disabled = false;
+                }
+            });
+        });
+        const checkboxess = document.querySelectorAll('.ponto-fechado');
+        const inputss = document.querySelectorAll('.fechado2');
+        checkboxess.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                const index = Array.from(checkboxess).indexOf(checkbox);
+                if (this.checked) {
+                    inputss[index].disabled = true;
+                } else {
+                    inputss[index].disabled = false;
+                }
+            });
+        });
+        const checkboxesss = document.querySelectorAll('.ponto-fechado');
+        const inputsss = document.querySelectorAll('.justificativa');
+        checkboxesss.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                const index = Array.from(checkboxesss).indexOf(checkbox);
+                if (this.checked) {
+                    inputsss[index].disabled = false;
+                } else {
+                    inputsss[index].disabled = true;
+                }
+            });
+        });
+       
+
+
+    </script>
+</body>
+</html>
